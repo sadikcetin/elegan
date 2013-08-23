@@ -4,6 +4,7 @@ class CreatePictures < ActiveRecord::Migration
       t.string :title
       t.string :file_size
       t.string :ext
+      t.references :imageable, polymorphic: true
 
       t.timestamps
     end
